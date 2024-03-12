@@ -25,10 +25,10 @@ namespace core
         double _value;
         double _not1_value;
         double _weight;
-        double _issec;
-        double _has_strat_children;
-        double _fixed_income;
-        double _bidoffer_set;
+        bool _issec;
+        bool _has_strat_children;
+        bool _fixed_income;
+        bool _bidoffer_set;
         double _bidoffer_paid;
 
     private:
@@ -45,16 +45,16 @@ namespace core
         std::string full_name;
         std::vector<Node> members;
         bool fixed_income;
+        bool integer_positions;
 
     private:
         std::vector<std::string> _universe_tickers;
+        std::vector<Node> _strat_children;
 
     public:
         Node(const std::string& name,
-             const Node& parent,
-             const std::map<std::string, Node>& children)
-        {
-        }
+             Node* parent,
+             const std::map<std::string, Node>& children);
     };
 
 }  // namespace core
