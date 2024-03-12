@@ -13,6 +13,6 @@ project(btcpp
 
 set(SRC
     main.cpp
-    src/helper.cpp)
+    src/core.cpp)
 
 add_executable(btcpp ${SRC})
