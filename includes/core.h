@@ -55,6 +55,8 @@ namespace core
         Node(const std::string& name,
              Node* parent,
              const std::map<std::string, Node>& children);
+
+        Node* get_child(std::string key);
     };
 
 }  // namespace core

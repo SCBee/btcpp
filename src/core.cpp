@@ -29,4 +29,13 @@ namespace core
             this->parent = parent;
         }
     }
+    Node* Node::get_child(std::string key)
+    {
+        if (this->children.count(key)) {
+            return &this->children[key];
+        }
+        else {
+            return nullptr;
+        }
+    }
 }  // namespace core
