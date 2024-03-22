@@ -6,13 +6,11 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 include_directories(includes)
 
-project(btcpp
-        VERSION 0.0.1
-        LANGUAGES CXX)
+project(
+  btcpp
+  VERSION 0.0.1
+  LANGUAGES CXX)
 
-
-set(SRC
-    main.cpp
-    src/core.cpp)
+set(SRC main.cpp src/core.cpp)
 
 add_executable(btcpp ${SRC})
